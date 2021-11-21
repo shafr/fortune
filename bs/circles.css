@@ -20,6 +20,7 @@ input{
     position: absolute;
     top: 30px;
     left: 300px;    
+    visibility: hidden;
 }
 #inputTop {
     top: 60px;
