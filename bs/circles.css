@@ -15,6 +15,7 @@ input{
     top: 10px;
     left: 10px; 
     width: 100px;   
+    visibility: hidden;
 }
 #calcButton {
     position: absolute;
@@ -65,4 +66,28 @@ input{
 }
 #triangle{
     font-size:250px;
+}
+
+#triangleInputCenter {
+    position: absolute;
+    left: 100px;
+    top: 180px;  
+}
+
+#triangleInputLeft {
+    position: absolute;
+    left: 50px;
+    top: 230px;  
+}
+
+#triangleInputRight {
+    position: absolute;
+    left: 150px;
+    top: 230px;  
+}
+
+#triangleInputTop {
+    position: absolute;
+    left: 100px;
+    top: 130px;  
 }

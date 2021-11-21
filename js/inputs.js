@@ -22,6 +22,11 @@ function sumNumbers(value) {
 
 
 function DoCalculations() {
+    // this.style.borderColor='transparent'
+    // document.getElementsByTagName("input").style.backgroundColor='transparent';
+    console.log("Done");
+    return;
+
     console.log("CLICKED");
     // birthDate = document.getElementById('birthDate').value;
     birthDate='24.12.1976'
