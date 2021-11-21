@@ -1,0 +1,67 @@
+.container {
+    position: relative;
+    display: inline-block;
+    height: 400px;
+}
+
+input{
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    width: 50px;
+    border-color: transparent;
+}
+#birthDate {
+    top: 10px;
+    left: 10px; 
+    width: 100px;   
+}
+#calcButton {
+    position: absolute;
+    top: 30px;
+    left: 300px;    
+}
+#inputTop {
+    top: 60px;
+    left: 170px;
+    
+}
+#inputBottom {
+    top: 300px;
+    left: 170px;
+}
+
+#inputTopLeft {
+    top: 120px;
+    left: 65px;
+}
+
+#inputBottomLeft {
+    top: 240px;
+    left: 65px;
+}
+
+#inputTopRight {
+    top: 115px;
+    left: 280px;
+}
+
+#inputBottomRight {
+    top: 240px;
+    left: 280px;
+}
+
+#inputCenter {
+    top: 180px;
+    left: 170px;
+}
+
+#triangleWithInputs {
+    position: absolute;
+    left: 500px;
+    top: 50px;
+    
+}
+#triangle{
+    font-size:250px;
+}
