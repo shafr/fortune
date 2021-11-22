@@ -11,7 +11,7 @@ input{
     text-align: center;
     width: 100px;
     font-size: x-large;
-    border-color: transparent;  
+    border-color: transparent;   
     background-color: transparent;
 }
 
@@ -76,7 +76,7 @@ input{
 
 #triangleInputCenter {
     left: 150px;
-    top: 220px; 
+    top: 210px; 
 }
 
 #triangleInputLeft {
@@ -92,6 +92,6 @@ input{
 }
 
 #triangleInputTop {
-    left: 150px;
-    top: 160px;  
+    left: 145px;
+    top: 130px;  
 }
