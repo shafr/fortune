@@ -15,6 +15,17 @@ input{
     background-color: transparent;
 }
 
+input:focus
+{
+    background-color:lightgray;
+}
+
+input:hover
+{
+    background-color:lightgray;
+    border-color: black;  
+}
+
 .triangleinput {
     width: 150px;
     position: absolute;
