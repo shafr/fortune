@@ -33,15 +33,18 @@ input:hover
 }
 
 #birthDate {
-    top: 10px;
-    left: 10px; 
-    width: 100px;   
-    visibility: hidden;
+    top: 400px;
+    left: 30px; 
+    width: 100px;  
+    font-size: medium; 
+    visibility: visible;
 }
 #calcButton {
     position: absolute;
-    top: 30px;
-    left: 300px;    
+    top: 400px;
+    left: 200px;    
+    background-color: transparent;
+    border-color: transparent;
     /* visibility: hidden; */
 }
 

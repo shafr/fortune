@@ -15,22 +15,8 @@
 
 <body>
     <main role="main" class="container">
-        <!-- <nav class="navbar navbar-expand navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarsExample02">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./list">List</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./settings">Settings</a>
-                    </li>
-                </ul>
-            </div>
-        </nav> -->
-
         <div class="imageWithCircles">
-            <input type="text" id="birthDate">
-            <button id="calcButton" onclick="DoCalculations()">Hide</button>
+            <input type="text" id="birthDate" onchange="DoCalculations()">
             <img src="clear.png" alt="something something">
             <input type="text" id="inputBottomLeft"  title="Физическая Реальность">
             <input type="text" id="inputBottomRight" title="Отношения">
@@ -40,7 +26,6 @@
             <input type="text" id="inputBottom"      title="Смысл жизни">
             <input type="text" id="inputTop"         title="Предназначение Души">
         </div>
-        <!-- <button type="button" onclick="refreshClientsList()" class="btn btn-outline-success btn-lg btn-block  mt-2 mb-2"> Refresh</button> -->
 
         <div id="triangleWithInputs">
             <img src="triangle.png" alt="something something">

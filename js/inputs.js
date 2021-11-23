@@ -1,7 +1,6 @@
-// function myChangeFunction(input1) {
-//     var input2 = document.getElementById('myInput2');
-//     input2.value = input1.value;
-// }
+function wrap(value){
+    return value + '/' + (23 - value);
+}
 
 const maxNum = 23;
 function sumNumbers(value) {
@@ -30,19 +29,17 @@ function sumNumbers(value) {
 
 function DoCalculations() {
     console.log("CLICKED");
-    // birthDate = document.getElementById('birthDate').value;
-    birthDate = '24.12.1976'
+    let birthDate = document.getElementById('birthDate').value;
+
     console.log(birthDate);
     var [day, month, year] = birthDate.split('.');
 
-    // BottomLeft = fizReality
-    let fizReality = 0;
-    if (day <= 23) {
-        fizReality = day;
-    } else {
-        fizReality = sumNumbers(day);
+    if (!day || !month || !year){
+        console.log("wrong format")
+        return
     }
 
+    let fizReality = sumNumbers(day);
     document.getElementById('inputBottomLeft').value = wrap(fizReality)
 
     let relationships = month;
@@ -62,8 +59,4 @@ function DoCalculations() {
 
     let soulPurpose = sumNumbers(Number(socialSphere) + Number(spiritualGrowth))
     document.getElementById('inputTop').value = wrap(soulPurpose);
-}
-
-function wrap(value){
-    return value + '/' + (23 - value);
 }
