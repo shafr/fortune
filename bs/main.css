@@ -42,8 +42,9 @@ input:hover
     position: absolute;
     top: 30px;
     left: 300px;    
-    visibility: hidden;
+    /* visibility: hidden; */
 }
+
 #inputTop {
     top: 50px;
     left: 150px;
