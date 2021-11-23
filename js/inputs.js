@@ -3,7 +3,14 @@
 //     input2.value = input1.value;
 // }
 
+const maxNum = 23;
 function sumNumbers(value) {
+    //TODO - what if equals ? 
+    if (value <= maxNum) {
+        console.log("Число меньше " + maxNum);
+        return value;
+    }
+
     let res = value
         .toString()
         .split('')
@@ -11,52 +18,52 @@ function sumNumbers(value) {
         .reduce(function (a, b) {
             return a + b;
         }, 0);
-    
-        console.log(res);
-        
-    if (res > 23){
-        return sumNumbers(res);
+
+    console.log("Число: " + value + "Сумма: " + res);
+
+    if (res > maxNum) {
+        return sumNumbers(res, maxNum);
     }
+
     return res;
 }
 
-
 function DoCalculations() {
-    // this.style.borderColor='transparent'
-    // document.getElementsByTagName("input").style.backgroundColor='transparent';
-    console.log("Done");
-    return;
-
     console.log("CLICKED");
     // birthDate = document.getElementById('birthDate').value;
-    birthDate='24.12.1976'
+    birthDate = '24.12.1976'
     console.log(birthDate);
     var [day, month, year] = birthDate.split('.');
 
     // BottomLeft = fizReality
-    let res = 0;
+    let fizReality = 0;
     if (day <= 23) {
-        res = day  + '/' + (23-day);
+        fizReality = day;
     } else {
-        res = sumNumbers(day) + '/' + (23 - sumNumbers(day));
+        fizReality = sumNumbers(day);
     }
-    document.getElementById('inputBottomLeft').value = res;
 
-    // BottomRight = relationships
-    document.getElementById('inputBottomRight').value = month + '/' + (23 - month);
-    // TopRight = socialSphere
-    res = sumNumbers(year);
-    document.getElementById('inputTopRight').value = res + '/' + (23 - res);
+    document.getElementById('inputBottomLeft').value = wrap(fizReality)
 
-    // TopLeft = spiritualGrowth
-    // document.getElementById('inputTopLeft').value = 
+    let relationships = month;
+    document.getElementById('inputBottomRight').value = wrap(relationships)
 
+    let socialSphere = sumNumbers(year);
+    document.getElementById('inputTopRight').value = wrap(socialSphere)
 
-    // Center = SoulKernel
+    let spiritualGrowth = sumNumbers(Number(fizReality) + Number(relationships) + Number(socialSphere))
+    document.getElementById('inputTopLeft').value = wrap(spiritualGrowth)
+    
+    let soulKernel = sumNumbers(Number(fizReality) + Number(relationships) + Number(socialSphere) + Number(spiritualGrowth))
+    document.getElementById('inputCenter').value = wrap(soulKernel)
 
-    // Bottom = LifeMeaning
+    let lifeMeaning = sumNumbers(Number(fizReality) + Number(relationships))
+    document.getElementById('inputBottom').value = wrap(lifeMeaning);
 
-    // Top = SoulPurpose
+    let soulPurpose = sumNumbers(Number(socialSphere) + Number(spiritualGrowth))
+    document.getElementById('inputTop').value = wrap(soulPurpose);
 }
 
-
+function wrap(value){
+    return value + '/' + (23 - value);
+}
