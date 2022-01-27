@@ -26,6 +26,11 @@ input:hover
     border-color: black;  
 }
 
+.circlesWithNumbers {
+    width: 500px;
+    background-color: red;
+}
+
 .triangleinput {
     width: 150px;
     position: absolute;
