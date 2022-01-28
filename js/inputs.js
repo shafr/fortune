@@ -67,6 +67,8 @@ function exportCanvas() {
 
     window.scrollTo(0, 0);
     html2canvas(element).then(canvas => {
+        let birthDate = document.getElementById('inputBirthDate').value;
+        let fileName = birthDate.replaceAll('.','-') + ".png";
         // document.body.appendChild(canvas)
         // getCanvas = canvas;
         let dataURL = canvas.toDataURL("image/png");
@@ -74,7 +76,7 @@ function exportCanvas() {
             /^data:image\/png/, "data:application/octet-stream");
         
         let button = document.getElementById("btn-save-result");
-        button.setAttribute("download", "circles.png")
+        button.setAttribute("download", fileName)
         button.setAttribute("href", newData);
     });
 
