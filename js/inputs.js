@@ -1,4 +1,4 @@
-function wrap(value){
+function wrap(value) {
     return value + '/' + (23 - value);
 }
 
@@ -29,12 +29,12 @@ function sumNumbers(value) {
 
 function DoCalculations() {
     console.log("CLICKED");
-    let birthDate = document.getElementById('birthDate').value;
+    let birthDate = document.getElementById('inputBirthDate').value;
 
     console.log(birthDate);
     var [day, month, year] = birthDate.split('.');
 
-    if (!day || !month || !year){
+    if (!day || !month || !year) {
         console.log("wrong format")
         return
     }
@@ -50,7 +50,7 @@ function DoCalculations() {
 
     let spiritualGrowth = sumNumbers(Number(fizReality) + Number(relationships) + Number(socialSphere))
     document.getElementById('inputTopLeft').value = wrap(spiritualGrowth)
-    
+
     let soulKernel = sumNumbers(Number(fizReality) + Number(relationships) + Number(socialSphere) + Number(spiritualGrowth))
     document.getElementById('inputCenter').value = wrap(soulKernel)
 
@@ -59,4 +59,34 @@ function DoCalculations() {
 
     let soulPurpose = sumNumbers(Number(socialSphere) + Number(spiritualGrowth))
     document.getElementById('inputTop').value = wrap(soulPurpose);
+}
+
+function exportCanvas() {
+
+    var element = document.getElementById('circlesWithNumbers')
+
+    window.scrollTo(0, 0);
+    html2canvas(element).then(canvas => {
+        // document.body.appendChild(canvas)
+        // getCanvas = canvas;
+        let dataURL = canvas.toDataURL("image/png");
+        let newData = dataURL.replace(
+            /^data:image\/png/, "data:application/octet-stream");
+        
+        let button = document.getElementById("btn-save-result");
+        button.setAttribute("download", "circles.png")
+        button.setAttribute("href", newData);
+    });
+
+    // var imgageData = getCanvas.toDataURL("image/png");
+
+
+    // Now browser starts downloading 
+    // it instead of just showing it
+    // var newData = imgageData.replace(
+    //     /^data:image\/png/, "data:application/octet-stream");
+
+    // document.getElementById("btn-Convert-Html2Image")
+    // .attr("download", "GeeksForGeeks.png")
+    // .attr("href", newData);
 }
