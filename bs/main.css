@@ -26,9 +26,10 @@ input:hover
     border-color: black;  
 }
 
-.circlesWithNumbers {
-    width: 500px;
+#circlesWithNumbers {
+    width: fit-content;
     background-color: red;
+    max-width: fit-content;
 }
 
 .triangleinput {
@@ -37,16 +38,28 @@ input:hover
     font-size: xx-large;
 }
 
-#birthDate {
+#inputBirthDate {
     top: 400px;
     left: 30px; 
     width: 100px;  
     font-size: medium; 
     visibility: visible;
 }
-#calcButton {
+
+#btn-Convert-Html2Image
+{
     position: absolute;
-    top: 400px;
+    top: 450px;
+    left: 50px;    
+    background-color: transparent;
+    border-color: transparent;
+    /* visibility: hidden; */
+}
+
+#btn-save-result
+{
+    position: absolute;
+    top: 450px;
     left: 200px;    
     background-color: transparent;
     border-color: transparent;

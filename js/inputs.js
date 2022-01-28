@@ -29,7 +29,7 @@ function sumNumbers(value) {
 
 function DoCalculations() {
     console.log("CLICKED");
-    let birthDate = document.getElementById('birthDate').value;
+    let birthDate = document.getElementById('inputBirthDate').value;
 
     console.log(birthDate);
     var [day, month, year] = birthDate.split('.');
@@ -65,18 +65,17 @@ function exportCanvas() {
 
     var element = document.getElementById('circlesWithNumbers')
 
+    window.scrollTo(0, 0);
     html2canvas(element).then(canvas => {
         // document.body.appendChild(canvas)
         // getCanvas = canvas;
-
         let dataURL = canvas.toDataURL("image/png");
         let newData = dataURL.replace(
             /^data:image\/png/, "data:application/octet-stream");
         
-        let button = document.getElementById("btn-Convert-Html2Image");
+        let button = document.getElementById("btn-save-result");
         button.setAttribute("download", "circles.png")
         button.setAttribute("href", newData);
-
     });
 
     // var imgageData = getCanvas.toDataURL("image/png");

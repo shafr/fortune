@@ -15,30 +15,38 @@
 
 <body>
     <main role="main" class="container">
+        <div id="circlesWithNumbers">
+            <input type="text" id="inputBirthDate" onchange="DoCalculations()">
+            <img src="clear.png" alt="something something">
+            <input type="text" id="inputBottomLeft" title="Физическая Реальность">
+            <input type="text" id="inputBottomRight" title="Отношения">
+            <input type="text" id="inputTopRight" title="Социальная Реализация">
+            <input type="text" id="inputTopLeft" title="Духовный Рост">
+            <input type="text" id="inputCenter" title="Ядро Души">
+            <input type="text" id="inputBottom" title="Смысл жизни">
+            <input type="text" id="inputTop" title="Предназначение Души">
+        </div>
+
+        <div id="triangleWithInputs">
+            <img src="triangle.png" alt="something something">
+            <input type="text" class="triangleinput" id="triangleInputLeft" title="Код матери">
+            <input type="text" class="triangleinput" id="triangleInputRight" title="Код отца">
+            <input type="text" class="triangleinput" id="triangleInputTop" title="Код имени">
+            <input type="text" class="triangleinput" id="triangleInputCenter" title="Тернер личности">
+        </div>
+
         <div>
-            <div class="imageWithCircles" id="circlesWithNumbers">
-                <input type="text" id="birthDate" onchange="DoCalculations()">
-                <img src="clear.png" alt="something something">
-                <input type="text" id="inputBottomLeft" title="Физическая Реальность">
-                <input type="text" id="inputBottomRight" title="Отношения">
-                <input type="text" id="inputTopRight" title="Социальная Реализация">
-                <input type="text" id="inputTopLeft" title="Духовный Рост">
-                <input type="text" id="inputCenter" title="Ядро Души">
-                <input type="text" id="inputBottom" title="Смысл жизни">
-                <input type="text" id="inputTop" title="Предназначение Души">
-            </div>
-
-            <div id="triangleWithInputs">
-                <img src="triangle.png" alt="something something">
-                <input type="text" class="triangleinput" id="triangleInputLeft" title="Код матери">
-                <input type="text" class="triangleinput" id="triangleInputRight" title="Код отца">
-                <input type="text" class="triangleinput" id="triangleInputTop" title="Код имени">
-                <input type="text" class="triangleinput" id="triangleInputCenter" title="Тернер личности">
-            </div>
-
-            <a id="btn-Convert-Html2Image" href="#" onclick="exportCanvas()">
-                Download
+        <a id="btn-Convert-Html2Image" href="#" onclick="exportCanvas()">
+            Convert to image
+        </a>
+        </div>
+        <div>
+            <a id="btn-save-result" href="#">
+                Download image
             </a>
+        </div>
+        <div id="exportCanvas">
+
         </div>
     </main>
 
