@@ -35,8 +35,9 @@ input:hover
 
 .triangleinput {
     width: 150px;
+    font-weight: bold;
     position: absolute;
-    font-size: xx-large;
+    font-size: medium;
 }
 
 #inputBirthDate {
@@ -49,7 +50,7 @@ input:hover
     border-style: dashed;
 }
 
-#btn-Convert-Html2Image
+#btn-Convert-Circles
 {
     position: absolute;
     top: 450px;
@@ -59,11 +60,21 @@ input:hover
     /* visibility: hidden; */
 }
 
-#btn-save-result
+#btn-Convert-Triangles
 {
     position: absolute;
     top: 450px;
     left: 200px;    
+    background-color: transparent;
+    border-color: transparent;
+    /* visibility: hidden; */
+}
+
+#btn-save-result
+{
+    position: absolute;
+    top: 450px;
+    left: 400px;    
     background-color: transparent;
     border-color: transparent;
     /* visibility: hidden; */
@@ -129,5 +140,5 @@ input:hover
 
 #triangleInputTop {
     left: 145px;
-    top: 130px;  
+    top: 100px;  
 }

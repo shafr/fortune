@@ -61,7 +61,7 @@ function DoCalculations() {
     document.getElementById('inputTop').value = wrap(soulPurpose);
 }
 
-function exportCanvas() {
+function exportCircles() {
 
     var element = document.getElementById('circlesWithNumbers')
 
@@ -91,4 +91,23 @@ function exportCanvas() {
     // document.getElementById("btn-Convert-Html2Image")
     // .attr("download", "GeeksForGeeks.png")
     // .attr("href", newData);
+}
+
+function exportTriangle() {
+
+    var element = document.getElementById('triangleWithInputs')
+
+    window.scrollTo(0, 0);
+    html2canvas(element).then(canvas => {
+        let fileName = "triangle.png";
+        // document.body.appendChild(canvas)
+        // getCanvas = canvas;
+        let dataURL = canvas.toDataURL("image/png");
+        let newData = dataURL.replace(
+            /^data:image\/png/, "data:application/octet-stream");
+        
+        let button = document.getElementById("btn-save-result");
+        button.setAttribute("download", fileName)
+        button.setAttribute("href", newData);
+    });
 }
